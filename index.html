@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rishika Jada — AI Engineer & Full Stack Developer portfolio."
+    />
+    <title>Rishika Jada | AI Engineer & Full Stack Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='50%25' r='60%25'%3E%3Cstop offset='0%25' stop-color='%23ff4fd8'/%3E%3Cstop offset='55%25' stop-color='%236b5cff'/%3E%3Cstop offset='100%25' stop-color='%2300d4ff'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='46' fill='url(%23g)'/%3E%3Cpath d='M33 65V35h14c9 0 14 5 14 12 0 6-3 10-9 11l10 15H54l-9-14h-5v14H33zm7-20h6c5 0 8-2 8-6s-3-6-8-6h-6v12z' fill='white'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="scrollProgress"></div>
+    </div>
+
+    <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+    <div class="bg-aurora" aria-hidden="true"></div>
+
+    <header class="nav glass">
+      <a class="nav__brand" href="#top" aria-label="Go to top">
+        <span class="nav__brandMark" aria-hidden="true"></span>
+        <span class="nav__brandText">Rishika</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <span class="btn__icon" aria-hidden="true">☾</span>
+          <span class="btn__text" data-theme-label>Dark</span>
+        </button>
+        <button class="btn btn--primary nav__menuBtn" id="menuBtn" type="button" aria-label="Open menu">
+          <span aria-hidden="true">Menu</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobileMenu glass" id="mobileMenu" hidden>
+      <div class="mobileMenu__header">
+        <span class="mobileMenu__title">Navigate</span>
+        <button class="btn btn--ghost" id="menuClose" type="button" aria-label="Close menu">
+          Close
+        </button>
+      </div>
+      <div class="mobileMenu__links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <aside class="socialDock glass" aria-label="Social links">
+      <a class="socialDock__icon" href="https://www.linkedin.com/in/rishika-jada-a3a53a275/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <span aria-hidden="true">in</span>
+      </a>
+      <a class="socialDock__icon" href="https://github.com/Rishika282005" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <span aria-hidden="true">⌂</span>
+      </a>
+      <a class="socialDock__icon" href="mailto:jadarishika@gmail.com" aria-label="Email">
+        <span aria-hidden="true">@</span>
+      </a>
+      <a class="socialDock__icon" href="tel:+919550411669" aria-label="Phone">
+        <span aria-hidden="true">✆</span>
+      </a>
+    </aside>
+
+    <main id="top">
+      <section class="hero container section" id="home" data-reveal>
+        <div class="hero__card glass">
+          <div class="hero__top">
+            <div class="avatar avatar--square" aria-label="Profile photo">
+              <div class="avatar__ring" aria-hidden="true"></div>
+              <div class="avatar__img">
+                <img
+                  src="https://drive.google.com/thumbnail?id=10XC0xjTRgYDbB-JJPRA_Z4Ajy5VPStDE&sz=w1000"
+                  alt="Rishika Jada"
+                  width="160"
+                  height="160"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+
+          <h1 class="hero__name">Rishika Jada</h1>
+          <p class="hero__tagline">
+            <span class="hero__typingLabel">I’m</span>
+            <span class="hero__typing" id="typingText" aria-label="Typing roles"></span>
+            <span class="hero__caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero__intro">
+            Computer Science undergraduate specializing in AI & ML, passionate about building scalable,
+            intelligent, and real-world impactful applications.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a
+              class="btn btn--ghost"
+              href="https://drive.google.com/file/d/185LzJJoPLnfj3JxWiKk4HvUn-Q68gUF2/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >View Resume</a>
+            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat glass">
+              <div class="stat__value">AI + Full Stack</div>
+              <div class="stat__label">Focus</div>
+            </div>
+            <div class="stat glass">
+              <div class="stat__value">NLP • LSTM</div>
+              <div class="stat__label">ML Interests</div>
+            </div>
+            <div class="stat glass">
+              <div class="stat__value">Flask • React</div>
+              <div class="stat__label">Stack</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="about" data-reveal>
+        <div class="sectionHead">
+          <h2>About</h2>
+          <p>
+            I build intelligent, end-to-end products—where strong engineering meets real-world impact.
+          </p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="glass card">
+            <h3 class="card__title">Who I am</h3>
+            <p class="muted">
+              I’m a Computer Science undergraduate specializing in <strong>AI & Machine Learning</strong>, with a strong
+              foundation in <strong>full-stack development</strong>. I love translating messy, real-world problems into
+              clean systems—whether that’s training an NLP model, designing REST APIs, or building polished UIs that feel
+              premium. I’ve worked on practical projects like AI chatbots, text intelligence (sentiment + sarcasm), and
+              health tech tools—always focusing on reliability, performance, and delightful user experience.
+            </p>
+
+            <div class="pillRow">
+              <span class="pill">Problem-solving mindset</span>
+              <span class="pill">Product-focused engineering</span>
+              <span class="pill">Clean UI + strong backend</span>
+            </div>
+          </div>
+
+          <div class="glass card">
+            <h3 class="card__title">Core strengths</h3>
+            <div class="bars" aria-label="Skill proficiency bars">
+              <div class="bar">
+                <div class="bar__top">
+                  <span>AI / ML</span><span class="muted">Advanced</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 88%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__top">
+                  <span>Full Stack Development</span><span class="muted">Advanced</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 86%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__top">
+                  <span>Backend APIs (Flask / REST)</span><span class="muted">Strong</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 82%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__top">
+                  <span>Frontend development</span><span class="muted">Strong</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 80%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__top">
+                  <span>Java developer</span><span class="muted">Strong</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 84%"></div></div>
+              </div>
+            </div>
+            <p class="hint">
+              Tip: Replace the bars with your exact ratings anytime—animations are automatic.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="skills" data-reveal>
+        <div class="sectionHead">
+          <h2>Skills</h2>
+          <p>Balanced across AI/ML, backend, and modern frontend engineering.</p>
+        </div>
+
+        <div class="skillsGrid">
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⌘</div>
+            <h3>Programming</h3>
+            <p class="muted">Java, Python</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⧉</div>
+            <h3>Web</h3>
+            <p class="muted">HTML, CSS, JavaScript, React.js</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⚙</div>
+            <h3>Backend</h3>
+            <p class="muted">Flask, REST APIs</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">◆</div>
+            <h3>Spring Boot</h3>
+            <p class="muted">Spring Boot, Spring MVC, Spring Data JPA, Hibernate ORM, Maven, Postman</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">✶</div>
+            <h3>AI / ML</h3>
+            <p class="muted">TensorFlow, NLP, LSTM, Pandas, NumPy</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⛁</div>
+            <h3>Databases</h3>
+            <p class="muted">MySQL, MongoDB, SQLite</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">☁</div>
+            <h3>Cloud</h3>
+            <p class="muted">AWS, Azure</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⎇</div>
+            <h3>Tools</h3>
+            <p class="muted">Git, GitHub</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="projects" data-reveal>
+        <div class="sectionHead">
+          <h2>Projects</h2>
+          <p>Premium cards with stacks, features, and action buttons.</p>
+        </div>
+
+        <div class="projectsGrid">
+          <article class="project glass" data-reveal>
+            <div class="project__media">
+              <div class="project__img project__img--shop" aria-label="ShopSphere project">
+                <div class="project__shine" aria-hidden="true"></div>
+                <span class="project__imgText">ShopSphere</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>ShopSphere – Backend-Driven E-Commerce Application</h3>
+                <p class="muted">
+                  <strong>Tech stack:</strong> Java, Spring Boot, Spring MVC, Spring Data JPA, Hibernate ORM, H2 Database,
+                  RESTful web services, Maven, Postman, JSON, MultipartFile, CORS.
+                </p>
+                <p class="muted">
+                  REST APIs for product CRUD and image handling—layered Spring architecture, JPA persistence, consistent
+                  error responses, and CORS-ready integration for a frontend client.
+                </p>
+              </div>
+              <ul class="featureList">
+                <li>Designed RESTful APIs for full product CRUD operations.</li>
+                <li>Layered architecture: Controller → Service → Repository for modularity and maintainability.</li>
+                <li>H2 with Spring Data JPA and Hibernate ORM for entity mapping and persistence.</li>
+                <li>Multipart file upload for product images using <code>MultipartFile</code>.</li>
+                <li>JSON request/response binding with Jackson.</li>
+                <li>Exception handling via <code>ResponseEntity</code> (400, 404, 500) for consistent API responses.</li>
+                <li>CORS configured for seamless frontend–backend communication.</li>
+                <li>REST endpoints tested and validated in Postman.</li>
+                <li>Maven for dependencies and build lifecycle.</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">Java</span>
+                <span class="badge">Spring Boot</span>
+                <span class="badge">Spring MVC</span>
+                <span class="badge">Spring Data JPA</span>
+                <span class="badge">Hibernate</span>
+                <span class="badge">H2</span>
+                <span class="badge">REST</span>
+                <span class="badge">Maven</span>
+                <span class="badge">Postman</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal>
+            <div class="project__media">
+              <div class="project__img" aria-label="Project image placeholder">
+                <div class="project__shine" aria-hidden="true"></div>
+                <span class="project__imgText">Echoverse</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Echoverse – AI Chatbot</h3>
+                <p class="muted">
+                  An advanced AI chatbot built using Flask, Gemini API, and SerpAPI supporting real-time web search,
+                  OCR, document summarization, voice interaction, and multi-language responses.
+                </p>
+              </div>
+              <ul class="featureList">
+                <li>Chat history</li>
+                <li>File upload</li>
+                <li>Theme toggle</li>
+                <li>Intelligent responses</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">Flask</span>
+                <span class="badge">Gemini API</span>
+                <span class="badge">SerpAPI</span>
+                <span class="badge">OCR</span>
+                <span class="badge">NLP</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--ghost" href="https://github.com/Rishika282005/Echoverse---AI-Chatbot" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal>
+            <div class="project__media">
+              <div class="project__img project__img--alt" aria-label="Project image placeholder">
+                <div class="project__shine" aria-hidden="true"></div>
+                <span class="project__imgText">NLP Intelligence</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Sentiment Analysis & Sarcasm Detection</h3>
+                <p class="muted">
+                  A deep learning NLP model using LSTM and TensorFlow to detect sentiment and sarcasm in text, trained on
+                  real-world datasets.
+                </p>
+              </div>
+              <ul class="featureList">
+                <li>High accuracy classification</li>
+                <li>Color-coded output</li>
+                <li>Real-time text analysis</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">TensorFlow</span>
+                <span class="badge">LSTM</span>
+                <span class="badge">NLP</span>
+                <span class="badge">Python</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--ghost" href="https://github.com/Rishika282005/SENTIMENT-ANALYSIS-AND-SARCASM-DETECTION-" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal>
+            <div class="project__media">
+              <div class="project__img project__img--health" aria-label="Project image placeholder">
+                <div class="project__shine" aria-hidden="true"></div>
+                <span class="project__imgText">Health Tech</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Healthcare Symptom Checker</h3>
+                <p class="muted">
+                  A web-based tool that predicts diseases based on user symptoms using Flask and SQLite.
+                </p>
+              </div>
+              <ul class="featureList">
+                <li>Offline support</li>
+                <li>Fast response</li>
+                <li>Clean UI</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">Flask</span>
+                <span class="badge">SQLite</span>
+                <span class="badge">REST</span>
+                <span class="badge">HTML/CSS</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--ghost" href="https://github.com/Rishika282005/Healthcare-Symptom-Checker" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section" id="why-hire-me" data-reveal>
+        <div class="sectionHead">
+          <h2>Why Hire Me?</h2>
+          <p>FAANG-level polish, real projects, and strong fundamentals.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="glass card">
+            <h3 class="card__title">Strong problem-solving</h3>
+            <p class="muted">I break down complex requirements, optimize for clarity, and ship maintainable solutions.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Real-world projects</h3>
+            <p class="muted">From AI chatbots to healthcare tools, I focus on reliability, UX, and measurable outcomes.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">AI + Full-stack combo</h3>
+            <p class="muted">I can build the model, the API, and the product UI—end-to-end.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Quick learner</h3>
+            <p class="muted">I adapt fast, learn new tools confidently, and iterate based on feedback and results.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Clean engineering</h3>
+            <p class="muted">Readable code, consistent patterns, and user-first design decisions.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Ownership mindset</h3>
+            <p class="muted">I care about the whole product: performance, accessibility, and user experience.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="education" data-reveal>
+        <div class="sectionHead">
+          <h2>Education</h2>
+          <p>Academic performance + consistent growth.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timelineItem glass">
+            <div class="timelineItem__dot" aria-hidden="true"></div>
+            <div class="timelineItem__content">
+              <h3>VIT-AP</h3>
+              <p class="muted">B.Tech CSE • GPA 8.08</p>
+            </div>
+          </div>
+          <div class="timelineItem glass">
+            <div class="timelineItem__dot" aria-hidden="true"></div>
+            <div class="timelineItem__content">
+              <h3>Narayana Junior College</h3>
+              <p class="muted">92.4%</p>
+            </div>
+          </div>
+          <div class="timelineItem glass">
+            <div class="timelineItem__dot" aria-hidden="true"></div>
+            <div class="timelineItem__content">
+              <h3>Red Cherries School</h3>
+              <p class="muted">96.8%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="experience" data-reveal>
+        <div class="sectionHead">
+          <h2>Experience</h2>
+          <p>Leadership, communication, and measurable impact.</p>
+        </div>
+
+        <div class="glass card">
+          <div class="split">
+            <div>
+              <h3 class="card__title">Social Media Head — Innovators Quest Club</h3>
+              <p class="muted">
+                Led social strategy and coordination for club initiatives—driving visibility, engagement, and smoother
+                event execution.
+              </p>
+            </div>
+            <div class="impact">
+              <div class="impact__item">
+                <div class="impact__num">10+</div>
+                <div class="impact__label">Events managed</div>
+              </div>
+              <div class="impact__item">
+                <div class="impact__num">↑</div>
+                <div class="impact__label">Engagement growth</div>
+              </div>
+              <div class="impact__item">
+                <div class="impact__num">Lead</div>
+                <div class="impact__label">Teams & collaboration</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="certifications" data-reveal>
+        <div class="sectionHead">
+          <h2>Certifications</h2>
+          <p>Validated skills across cloud and AI.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="glass card">
+            <h3 class="card__title">Azure AI-900</h3>
+            <p class="muted">Microsoft Azure AI Fundamentals</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">AWS Cloud Foundations</h3>
+            <p class="muted">Cloud essentials + best practices</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Oracle Generative AI</h3>
+            <p class="muted">GenAI concepts + applications</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Oracle Cloud Associate</h3>
+            <p class="muted">Cloud fundamentals + services</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="contact" data-reveal>
+        <div class="sectionHead">
+          <h2>Contact</h2>
+          <p>Let’s build something exceptional together.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="glass card">
+            <h3 class="card__title">Reach me</h3>
+            <div class="contactList">
+              <a class="contactItem" href="mailto:jadarishika@gmail.com">
+                <span class="contactItem__k">Email</span>
+                <span class="contactItem__v">jadarishika@gmail.com</span>
+              </a>
+              <a class="contactItem" href="tel:+919550411669">
+                <span class="contactItem__k">Phone</span>
+                <span class="contactItem__v">+91 95504 11669</span>
+              </a>
+              <a class="contactItem" href="https://www.linkedin.com/in/rishika-jada-a3a53a275/" target="_blank" rel="noreferrer">
+                <span class="contactItem__k">LinkedIn</span>
+                <span class="contactItem__v">linkedin.com/in/rishika-jada-a3a53a275</span>
+              </a>
+              <a class="contactItem" href="https://github.com/Rishika282005" target="_blank" rel="noreferrer">
+                <span class="contactItem__k">GitHub</span>
+                <span class="contactItem__v">github.com/Rishika282005</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="glass card form" id="contactForm" autocomplete="on" novalidate>
+            <h3 class="card__title">Send a message</h3>
+            <input
+              type="text"
+              name="_honey"
+              class="form__hp"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Name</span>
+                <input class="field__input" name="name" placeholder="Your name" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" placeholder="you@email.com" required />
+              </label>
+            </div>
+            <label class="field">
+              <span class="field__label">Subject</span>
+              <input class="field__input" name="subject" placeholder="What’s this about?" required />
+            </label>
+            <label class="field">
+              <span class="field__label">Message</span>
+              <textarea class="field__input field__textarea" name="message" rows="6" placeholder="Write your message..." required></textarea>
+            </label>
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Send</button>
+              <button class="btn btn--ghost" type="reset">Reset</button>
+            </div>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer container">
+        <div class="footer__inner glass">
+          <div class="footer__left">
+            <div class="footer__brand">Rishika Jada</div>
+            <div class="footer__muted">AI Engineer • Full Stack Developer</div>
+          </div>
+          <div class="footer__right">
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#top">Back to top</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <button class="toTop glass" id="toTop" type="button" aria-label="Back to top" hidden>
+      ↑
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
